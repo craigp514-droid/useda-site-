@@ -1,0 +1,507 @@
+---
+// Multi-step lead capture form with project type segmentation
+---
+
+<div id="multi-step-form" class="bg-white rounded-2xl shadow-xl p-8">
+
+  <!-- Step 1: Project Type Selection -->
+  <div id="step-1" class="step">
+    <h3 class="text-xl font-semibold text-navy-900 mb-2">What type of project are you planning?</h3>
+    <p class="text-gray-600 mb-6">Select the option that best describes your expansion.</p>
+
+    <div class="space-y-3">
+      <!-- Manufacturing -->
+      <button
+        type="button"
+        data-project-type="manufacturing"
+        class="project-type-btn w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-navy-500 hover:bg-navy-50 transition-all group"
+      >
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-navy-200 transition-colors">
+            <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy-900">Manufacturing / Production</h4>
+            <p class="text-sm text-gray-600">New plant, production facility, or assembly operation</p>
+          </div>
+        </div>
+      </button>
+
+      <!-- Distribution -->
+      <button
+        type="button"
+        data-project-type="distribution"
+        class="project-type-btn w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-navy-500 hover:bg-navy-50 transition-all group"
+      >
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-navy-200 transition-colors">
+            <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy-900">Distribution / Logistics</h4>
+            <p class="text-sm text-gray-600">Warehouse, fulfillment center, or distribution hub</p>
+          </div>
+        </div>
+      </button>
+
+      <!-- HQ / Back Office -->
+      <button
+        type="button"
+        data-project-type="headquarters"
+        class="project-type-btn w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-navy-500 hover:bg-navy-50 transition-all group"
+      >
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-navy-200 transition-colors">
+            <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy-900">Headquarters / Back Office</h4>
+            <p class="text-sm text-gray-600">Corporate HQ, regional office, or shared services center</p>
+          </div>
+        </div>
+      </button>
+
+      <!-- Retail -->
+      <button
+        type="button"
+        data-project-type="retail"
+        class="project-type-btn w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-navy-500 hover:bg-navy-50 transition-all group"
+      >
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-navy-200 transition-colors">
+            <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-navy-900">Retail</h4>
+            <p class="text-sm text-gray-600">Store, showroom, or retail location</p>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Step 2: Contact & Project Details Form -->
+  <div id="step-2" class="step hidden">
+    <button type="button" id="back-btn" class="text-navy-600 hover:text-navy-800 mb-4 flex items-center text-sm font-medium">
+      <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back
+    </button>
+
+    <div id="form-header" class="mb-6">
+      <h3 class="text-xl font-semibold text-navy-900 mb-1">
+        <span id="project-type-label">Manufacturing</span> Expansion
+      </h3>
+      <p class="text-gray-600">Tell us about your project and we'll send your customized checklist.</p>
+    </div>
+
+    <form
+      name="expansion-inquiry"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/thank-you"
+      class="space-y-4"
+    >
+      <input type="hidden" name="form-name" value="expansion-inquiry" />
+      <input type="hidden" name="project-type" id="project-type-input" value="" />
+      <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+
+      <!-- Company Name -->
+      <div>
+        <label for="company" class="block text-sm font-medium text-gray-700 mb-1">
+          Company Name <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors"
+          placeholder="Your company name"
+        />
+      </div>
+
+      <!-- Contact Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
+          Your Name <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors"
+          placeholder="Your full name"
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+          Email <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors"
+          placeholder="you@company.com"
+        />
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
+          Phone <span class="text-gray-400">(optional)</span>
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors"
+          placeholder="+1 (555) 000-0000"
+        />
+      </div>
+
+      <!-- Current Location -->
+      <div>
+        <label for="location" class="block text-sm font-medium text-gray-700 mb-1">
+          Current Location <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors"
+          placeholder="Country or US State"
+        />
+      </div>
+
+      <!-- Industry -->
+      <div>
+        <label for="industry" class="block text-sm font-medium text-gray-700 mb-1">
+          Industry / Sector <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="industry"
+          name="industry"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors"
+          placeholder="e.g., Automotive, Technology, Consumer Goods"
+        />
+      </div>
+
+      <!-- Project-specific fields - Manufacturing -->
+      <div id="manufacturing-fields" class="project-fields space-y-4 hidden">
+        <div>
+          <label for="estimated-jobs" class="block text-sm font-medium text-gray-700 mb-1">
+            Estimated Jobs to Create <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="estimated-jobs"
+            name="estimated-jobs"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select range</option>
+            <option value="1-25">1-25 employees</option>
+            <option value="26-50">26-50 employees</option>
+            <option value="51-100">51-100 employees</option>
+            <option value="101-250">101-250 employees</option>
+            <option value="251-500">251-500 employees</option>
+            <option value="500+">500+ employees</option>
+          </select>
+        </div>
+        <div>
+          <label for="capital-investment" class="block text-sm font-medium text-gray-700 mb-1">
+            Estimated Capital Investment <span class="text-gray-400">(optional)</span>
+          </label>
+          <select
+            id="capital-investment"
+            name="capital-investment"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select range</option>
+            <option value="Under $1M">Under $1 million</option>
+            <option value="$1M-$5M">$1-5 million</option>
+            <option value="$5M-$25M">$5-25 million</option>
+            <option value="$25M-$100M">$25-100 million</option>
+            <option value="$100M+">Over $100 million</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Project-specific fields - Distribution -->
+      <div id="distribution-fields" class="project-fields space-y-4 hidden">
+        <div>
+          <label for="square-footage" class="block text-sm font-medium text-gray-700 mb-1">
+            Estimated Square Footage Needed <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="square-footage"
+            name="square-footage"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select range</option>
+            <option value="Under 50,000 SF">Under 50,000 SF</option>
+            <option value="50,000-100,000 SF">50,000-100,000 SF</option>
+            <option value="100,000-250,000 SF">100,000-250,000 SF</option>
+            <option value="250,000-500,000 SF">250,000-500,000 SF</option>
+            <option value="500,000+ SF">500,000+ SF</option>
+          </select>
+        </div>
+        <div>
+          <label for="distribution-type" class="block text-sm font-medium text-gray-700 mb-1">
+            Primary Function <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="distribution-type"
+            name="distribution-type"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select type</option>
+            <option value="E-commerce fulfillment">E-commerce fulfillment</option>
+            <option value="Regional distribution">Regional distribution</option>
+            <option value="National distribution">National distribution</option>
+            <option value="Import/Export hub">Import/Export hub</option>
+            <option value="Last-mile delivery">Last-mile delivery</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Project-specific fields - HQ/Back Office -->
+      <div id="headquarters-fields" class="project-fields space-y-4 hidden">
+        <div>
+          <label for="office-headcount" class="block text-sm font-medium text-gray-700 mb-1">
+            Estimated Headcount <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="office-headcount"
+            name="office-headcount"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select range</option>
+            <option value="1-25">1-25 employees</option>
+            <option value="26-50">26-50 employees</option>
+            <option value="51-100">51-100 employees</option>
+            <option value="101-250">101-250 employees</option>
+            <option value="251-500">251-500 employees</option>
+            <option value="500+">500+ employees</option>
+          </select>
+        </div>
+        <div>
+          <label for="office-type" class="block text-sm font-medium text-gray-700 mb-1">
+            Office Type <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="office-type"
+            name="office-type"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select type</option>
+            <option value="Corporate headquarters">Corporate headquarters</option>
+            <option value="Regional headquarters">Regional headquarters</option>
+            <option value="Shared services center">Shared services center</option>
+            <option value="Tech/Engineering hub">Tech/Engineering hub</option>
+            <option value="Customer service center">Customer service center</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Project-specific fields - Retail -->
+      <div id="retail-fields" class="project-fields space-y-4 hidden">
+        <div>
+          <label for="store-count" class="block text-sm font-medium text-gray-700 mb-1">
+            Number of Locations Planned <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="store-count"
+            name="store-count"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select range</option>
+            <option value="1 (Flagship/Test)">1 location (Flagship or test store)</option>
+            <option value="2-5">2-5 locations</option>
+            <option value="6-10">6-10 locations</option>
+            <option value="11-25">11-25 locations</option>
+            <option value="25+">25+ locations</option>
+          </select>
+        </div>
+        <div>
+          <label for="store-format" class="block text-sm font-medium text-gray-700 mb-1">
+            Store Format <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="store-format"
+            name="store-format"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select format</option>
+            <option value="Street-level / High street">Street-level / High street</option>
+            <option value="Shopping mall">Shopping mall / Lifestyle center</option>
+            <option value="Strip center">Strip center / Power center</option>
+            <option value="Outlet center">Outlet center</option>
+            <option value="Standalone">Standalone building</option>
+            <option value="Mixed-use">Mixed-use development</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div>
+          <label for="us-presence" class="block text-sm font-medium text-gray-700 mb-1">
+            Current US Presence <span class="text-red-500">*</span>
+          </label>
+          <select
+            id="us-presence"
+            name="us-presence"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+          >
+            <option value="">Select option</option>
+            <option value="No US presence">No US presence (first entry)</option>
+            <option value="E-commerce only">E-commerce only, adding physical retail</option>
+            <option value="Wholesale only">Wholesale/wholesale partners only</option>
+            <option value="Existing stores">Have existing US stores, expanding</option>
+          </select>
+        </div>
+        <div>
+          <label for="target-markets" class="block text-sm font-medium text-gray-700 mb-1">
+            Target Markets <span class="text-gray-400">(optional)</span>
+          </label>
+          <input
+            type="text"
+            id="target-markets"
+            name="target-markets"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors"
+            placeholder="e.g., New York, Los Angeles, Miami"
+          />
+        </div>
+      </div>
+
+      <!-- Timeline (all types) -->
+      <div>
+        <label for="timeline" class="block text-sm font-medium text-gray-700 mb-1">
+          Target Timeline <span class="text-red-500">*</span>
+        </label>
+        <select
+          id="timeline"
+          name="timeline"
+          required
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors bg-white"
+        >
+          <option value="">When do you need to be operational?</option>
+          <option value="0-6 months">0-6 months</option>
+          <option value="6-12 months">6-12 months</option>
+          <option value="1-2 years">1-2 years</option>
+          <option value="2+ years">2+ years</option>
+          <option value="Just exploring">Just exploring options</option>
+        </select>
+      </div>
+
+      <!-- Project Description -->
+      <div>
+        <label for="project" class="block text-sm font-medium text-gray-700 mb-1">
+          Anything else we should know? <span class="text-gray-400">(optional)</span>
+        </label>
+        <textarea
+          id="project"
+          name="project"
+          rows="3"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-navy-500 transition-colors resize-none"
+          placeholder="Target regions, special requirements, key priorities..."
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="w-full bg-accent-500 text-white px-6 py-4 rounded-lg font-semibold hover:bg-accent-600 transition-colors text-lg"
+      >
+        Get Your <span id="submit-checklist-type">Manufacturing</span> Checklist
+      </button>
+
+      <p class="text-xs text-gray-500 text-center">
+        We'll send your customized checklist and follow up to discuss your project. No spam, ever.
+      </p>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const step1 = document.getElementById('step-1');
+    const step2 = document.getElementById('step-2');
+    const backBtn = document.getElementById('back-btn');
+    const projectTypeButtons = document.querySelectorAll('.project-type-btn');
+    const projectTypeInput = document.getElementById('project-type-input');
+    const projectTypeLabel = document.getElementById('project-type-label');
+    const submitChecklistType = document.getElementById('submit-checklist-type');
+    const projectFields = document.querySelectorAll('.project-fields');
+
+    const projectLabels = {
+      'manufacturing': 'Manufacturing',
+      'distribution': 'Distribution',
+      'headquarters': 'Headquarters / Back Office',
+      'retail': 'Retail'
+    };
+
+    // Handle project type selection
+    projectTypeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const projectType = btn.dataset.projectType;
+
+        // Update hidden input
+        projectTypeInput.value = projectType;
+
+        // Update labels
+        projectTypeLabel.textContent = projectLabels[projectType];
+        submitChecklistType.textContent = projectLabels[projectType];
+
+        // Show/hide project-specific fields
+        projectFields.forEach(field => field.classList.add('hidden'));
+        const targetFields = document.getElementById(`${projectType}-fields`);
+        if (targetFields) {
+          targetFields.classList.remove('hidden');
+          // Make fields required when visible
+          targetFields.querySelectorAll('select').forEach(select => {
+            if (!select.name.includes('capital-investment')) {
+              select.required = true;
+            }
+          });
+        }
+
+        // Hide other fields' required attribute
+        projectFields.forEach(field => {
+          if (field.id !== `${projectType}-fields`) {
+            field.querySelectorAll('select, input').forEach(input => {
+              input.required = false;
+            });
+          }
+        });
+
+        // Switch to step 2
+        step1.classList.add('hidden');
+        step2.classList.remove('hidden');
+      });
+    });
+
+    // Handle back button
+    backBtn.addEventListener('click', () => {
+      step2.classList.add('hidden');
+      step1.classList.remove('hidden');
+    });
+  });
+</script>
