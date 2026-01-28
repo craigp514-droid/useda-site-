@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Thank You | US Economic Development Association">
+  <Header />
+
+  <main>
+    <section class="py-20 sm:py-32 bg-gradient-to-b from-navy-50 to-white">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Success Icon -->
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
+          <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+          Thank You!
+        </h1>
+
+        <p class="text-xl text-gray-600 mb-8">
+          Your US Expansion Planning Checklist is on its way to your inbox.
+        </p>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg text-left mb-8">
+          <h2 class="text-lg font-semibold text-navy-900 mb-4">What happens next?</h2>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="w-6 h-6 bg-navy-100 rounded-full flex items-center justify-center text-navy-700 font-semibold text-sm mr-3 flex-shrink-0">1</span>
+              <span class="text-gray-700">Check your email for the checklist (it should arrive within a few minutes)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-6 h-6 bg-navy-100 rounded-full flex items-center justify-center text-navy-700 font-semibold text-sm mr-3 flex-shrink-0">2</span>
+              <span class="text-gray-700">Review the checklist and start thinking through your project requirements</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-6 h-6 bg-navy-100 rounded-full flex items-center justify-center text-navy-700 font-semibold text-sm mr-3 flex-shrink-0">3</span>
+              <span class="text-gray-700">One of our team members will reach out to discuss your project and answer any questions</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-gray-500 text-sm">
+          Didn't receive the email? Check your spam folder or
+          <a href="mailto:info@useconomicdevelopment.com" class="text-navy-700 hover:text-navy-900">contact us</a>.
+        </p>
+
+        <div class="mt-12">
+          <a href="/" class="text-navy-700 font-medium hover:text-navy-900 inline-flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

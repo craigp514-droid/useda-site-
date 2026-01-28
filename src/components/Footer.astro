@@ -1,0 +1,39 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-navy-950 text-navy-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- About -->
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+            <span class="text-navy-900 font-bold text-sm">US</span>
+          </div>
+          <span class="text-white font-semibold">US Economic Development Association</span>
+        </div>
+        <p class="text-navy-300 text-sm max-w-md">
+          Helping companies navigate business expansion in the United States.
+          Free guidance on site selection, economic development resources, and incentive programs.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="md:text-right">
+        <h4 class="text-white font-semibold mb-4">Questions?</h4>
+        <p class="text-navy-300 text-sm">
+          We're here to help you navigate your US expansion.
+        </p>
+        <a href="mailto:info@useconomicdevelopment.com" class="text-accent-400 hover:text-accent-500 text-sm mt-2 inline-block">
+          info@useconomicdevelopment.com
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-navy-800 mt-8 pt-8 text-center text-navy-400 text-sm">
+      <p>&copy; {currentYear} US Economic Development Association. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

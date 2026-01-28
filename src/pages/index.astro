@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LeadForm from '../components/LeadForm.astro';
+---
+
+<BaseLayout title="US Economic Development Association | Navigate Your US Expansion">
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-navy-50 to-white py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold text-navy-900 leading-tight mb-6">
+            Expanding in the United States?
+            <span class="block text-navy-600">We'll Help You Navigate the Complexity.</span>
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Whether you're entering the US market for the first time or expanding to a new state,
+            we provide free guidance to help you understand your options and connect with the right resources.
+          </p>
+          <a
+            href="#get-started"
+            class="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/25"
+          >
+            Get Your Free Expansion Planning Checklist
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+            The US Market is Massive. It's Also Massively Complex.
+          </h2>
+          <p class="text-lg text-gray-600">
+            Every US state operates differently when it comes to business. What works in Texas doesn't
+            apply in Ohio. What's available in Georgia might not exist in Arizona.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Challenge 1 -->
+          <div class="bg-navy-50 rounded-xl p-6">
+            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-navy-900 mb-2">50 States, 50 Sets of Rules</h3>
+            <p class="text-gray-600">
+              Corporate taxes, property taxes, sales taxes, and employment regulations vary significantly across state lines.
+            </p>
+          </div>
+
+          <!-- Challenge 2 -->
+          <div class="bg-navy-50 rounded-xl p-6">
+            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-navy-900 mb-2">3,000+ Economic Development Organizations</h3>
+            <p class="text-gray-600">
+              States, regions, cities, and counties all have their own organizations—each competing for your business.
+            </p>
+          </div>
+
+          <!-- Challenge 3 -->
+          <div class="bg-navy-50 rounded-xl p-6">
+            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-navy-900 mb-2">Hidden Incentive Opportunities</h3>
+            <p class="text-gray-600">
+              Many companies leave significant money on the table because they don't know what's available or how to access it.
+            </p>
+          </div>
+
+          <!-- Challenge 4 -->
+          <div class="bg-navy-50 rounded-xl p-6">
+            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-navy-900 mb-2">Workforce Varies Dramatically</h3>
+            <p class="text-gray-600">
+              Labor availability, skills, costs, and training programs differ significantly by region.
+            </p>
+          </div>
+
+          <!-- Challenge 5 -->
+          <div class="bg-navy-50 rounded-xl p-6">
+            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-navy-900 mb-2">No Single Source of Truth</h3>
+            <p class="text-gray-600">
+              Information is scattered, often outdated, and usually biased toward whoever is providing it.
+            </p>
+          </div>
+
+          <!-- Challenge 6 -->
+          <div class="bg-navy-50 rounded-xl p-6">
+            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-navy-900 mb-2">Time-Consuming Research</h3>
+            <p class="text-gray-600">
+              Figuring out where to even start can take months of research and dozens of conversations.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <p class="text-xl text-navy-700 font-medium">
+            You need an objective guide. That's where we come in.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 sm:py-20 bg-navy-900">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            How We Help Companies Like Yours
+          </h2>
+          <p class="text-lg text-navy-200 max-w-2xl mx-auto">
+            Our process is straightforward. We help you understand your options, plan your approach, and connect with the right resources—at no cost to you.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="relative">
+            <div class="bg-navy-800 rounded-xl p-8">
+              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+                1
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Understand Your Project</h3>
+              <p class="text-navy-200">
+                We start by learning about your expansion goals, timeline, and current stage. Are you exploring? Actively searching? Ready to make decisions? Every company is different, and cookie-cutter advice doesn't work.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative">
+            <div class="bg-navy-800 rounded-xl p-8">
+              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+                2
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Create Your Planning Framework</h3>
+              <p class="text-navy-200">
+                We provide a complimentary planning document that outlines what you need to consider: costs, risks, timelines, workforce requirements, regulatory considerations, and incentive opportunities. No sales pitch—just practical guidance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative">
+            <div class="bg-navy-800 rounded-xl p-8">
+              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+                3
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-3">Connect With the Right Resources</h3>
+              <p class="text-navy-200">
+                When you're ready, we introduce you to economic development organizations, site selectors, or service providers that match your specific project. We focus on fit, not volume—the wrong introduction wastes everyone's time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Connect You With Section -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+            Your Project. The Right Partners.
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Depending on your needs and how hands-on you want to be, we connect you with the right type of support.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Economic Development Organizations -->
+          <div class="border border-gray-200 rounded-xl p-8 hover:border-navy-300 transition-colors">
+            <div class="w-14 h-14 bg-navy-100 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-navy-900 mb-3">Economic Development Organizations</h3>
+            <p class="text-gray-600 mb-4">
+              State, regional, and local organizations across the US are eager to help companies establish operations. They offer site identification, workforce resources, incentive guidance, and community connections—typically at no cost to you.
+            </p>
+            <p class="text-gray-600 mb-6">
+              <strong>Best for:</strong> Companies who want to navigate their expansion directly and work with communities hands-on.
+            </p>
+            <a href="#" class="text-navy-700 font-medium hover:text-navy-900 inline-flex items-center">
+              Learn about Economic Development Organizations
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Site Selectors -->
+          <div class="border border-gray-200 rounded-xl p-8 hover:border-navy-300 transition-colors">
+            <div class="w-14 h-14 bg-navy-100 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-navy-900 mb-3">Site Selectors</h3>
+            <p class="text-gray-600 mb-4">
+              Professional consultants who specialize in helping companies find the right location. They handle site searches, incentive negotiations, and project management. Different fee structures exist—we help you understand your options.
+            </p>
+            <p class="text-gray-600 mb-6">
+              <strong>Best for:</strong> Companies who want expert guidance and someone to manage the process on their behalf.
+            </p>
+            <a href="#" class="text-navy-700 font-medium hover:text-navy-900 inline-flex items-center">
+              Learn about Site Selectors
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section id="get-started" class="py-16 sm:py-20 bg-navy-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <!-- Left Column - Copy -->
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+              Ready to Start Planning Your US Expansion?
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Get our free <strong>US Expansion Planning Checklist</strong>—a comprehensive guide to everything you need to consider before selecting a US location.
+            </p>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">Key questions to answer before you start evaluating locations</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">Cost categories most companies overlook</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">Timeline planning framework</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">Regulatory and compliance considerations by category</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-700">Incentive opportunity overview</span>
+              </li>
+            </ul>
+
+            <p class="text-gray-600 text-sm">
+              After you submit the form, we'll send you the checklist and follow up to see if we can help with your specific project. No pressure, no spam.
+            </p>
+          </div>
+
+          <!-- Right Column - Form -->
+          <div class="bg-white rounded-2xl shadow-xl p-8">
+            <h3 class="text-xl font-semibold text-navy-900 mb-6">Get Your Free Checklist</h3>
+            <LeadForm />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust/Credibility Section -->
+    <section class="py-12 bg-white border-t border-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <p class="text-gray-500 text-sm uppercase tracking-wide mb-4">Trusted by companies expanding across the United States</p>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            We work with economic development organizations in all 50 states to help companies find the right fit for their expansion.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
