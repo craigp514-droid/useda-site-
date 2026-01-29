@@ -10,20 +10,31 @@ import MultiStepForm from '../components/MultiStepForm.astro';
 
   <main>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-navy-50 to-white py-16 sm:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="relative py-20 sm:py-32 overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0">
+        <img
+          src="/images/Futuristic_network_map_of_the_US.png"
+          alt=""
+          class="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-navy-950/85"></div>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl sm:text-5xl font-bold text-navy-900 leading-tight mb-6">
+          <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
             Expanding in the United States?
-            <span class="block text-navy-600">We'll Help You Navigate the Complexity.</span>
+            <span class="block text-navy-200">We'll Help You Navigate the Complexity.</span>
           </h1>
-          <p class="text-xl text-gray-600 mb-8">
+          <p class="text-xl text-navy-100 mb-8">
             Whether you're entering the US market for the first time or expanding to a new state,
             we provide free guidance to help you understand your options and connect with the right resources.
           </p>
           <a
             href="#get-started"
-            class="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/25"
+            class="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30"
           >
             Get Your Free Expansion Planning Checklist
           </a>
@@ -45,79 +56,54 @@ import MultiStepForm from '../components/MultiStepForm.astro';
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Challenge 1 -->
-          <div class="bg-navy-50 rounded-xl p-6">
-            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
+          <!-- Challenge 1 - US Map -->
+          <div class="bg-navy-50 rounded-xl p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-[url('/images/Business_expansion_service_icons.png')] bg-[length:300%_200%] bg-[position:0%_0%]"></div>
             <h3 class="text-lg font-semibold text-navy-900 mb-2">50 States, 50 Sets of Rules</h3>
             <p class="text-gray-600">
               Corporate taxes, property taxes, sales taxes, and employment regulations vary significantly across state lines.
             </p>
           </div>
 
-          <!-- Challenge 2 -->
-          <div class="bg-navy-50 rounded-xl p-6">
-            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
+          <!-- Challenge 2 - Org Chart -->
+          <div class="bg-navy-50 rounded-xl p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-[url('/images/Business_expansion_service_icons.png')] bg-[length:300%_200%] bg-[position:50%_0%]"></div>
             <h3 class="text-lg font-semibold text-navy-900 mb-2">3,000+ Economic Development Organizations</h3>
             <p class="text-gray-600">
               States, regions, cities, and counties all have their own organizations—each competing for your business.
             </p>
           </div>
 
-          <!-- Challenge 3 -->
-          <div class="bg-navy-50 rounded-xl p-6">
-            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
+          <!-- Challenge 3 - Coins -->
+          <div class="bg-navy-50 rounded-xl p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-[url('/images/Business_expansion_service_icons.png')] bg-[length:300%_200%] bg-[position:100%_0%]"></div>
             <h3 class="text-lg font-semibold text-navy-900 mb-2">Hidden Incentive Opportunities</h3>
             <p class="text-gray-600">
               Many companies leave significant money on the table because they don't know what's available or how to access it.
             </p>
           </div>
 
-          <!-- Challenge 4 -->
-          <div class="bg-navy-50 rounded-xl p-6">
-            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
+          <!-- Challenge 4 - Workers -->
+          <div class="bg-navy-50 rounded-xl p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-[url('/images/Business_expansion_service_icons.png')] bg-[length:300%_200%] bg-[position:0%_100%]"></div>
             <h3 class="text-lg font-semibold text-navy-900 mb-2">Workforce Varies Dramatically</h3>
             <p class="text-gray-600">
               Labor availability, skills, costs, and training programs differ significantly by region.
             </p>
           </div>
 
-          <!-- Challenge 5 -->
-          <div class="bg-navy-50 rounded-xl p-6">
-            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
+          <!-- Challenge 5 - Documents -->
+          <div class="bg-navy-50 rounded-xl p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-[url('/images/Business_expansion_service_icons.png')] bg-[length:300%_200%] bg-[position:50%_100%]"></div>
             <h3 class="text-lg font-semibold text-navy-900 mb-2">No Single Source of Truth</h3>
             <p class="text-gray-600">
               Information is scattered, often outdated, and usually biased toward whoever is providing it.
             </p>
           </div>
 
-          <!-- Challenge 6 -->
-          <div class="bg-navy-50 rounded-xl p-6">
-            <div class="w-12 h-12 bg-navy-900 rounded-lg flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
+          <!-- Challenge 6 - Clock -->
+          <div class="bg-navy-50 rounded-xl p-6 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-[url('/images/Business_expansion_service_icons.png')] bg-[length:300%_200%] bg-[position:100%_100%]"></div>
             <h3 class="text-lg font-semibold text-navy-900 mb-2">Time-Consuming Research</h3>
             <p class="text-gray-600">
               Figuring out where to even start can take months of research and dozens of conversations.
@@ -145,43 +131,69 @@ import MultiStepForm from '../components/MultiStepForm.astro';
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="space-y-8">
           <!-- Step 1 -->
-          <div class="relative">
-            <div class="bg-navy-800 rounded-xl p-8">
-              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
+          <div class="bg-navy-800 rounded-xl p-8">
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 mr-6">
                 1
               </div>
-              <h3 class="text-xl font-semibold text-white mb-3">Understand Your Project</h3>
-              <p class="text-navy-200">
-                We start by learning about your expansion goals, timeline, and current stage. Are you exploring? Actively searching? Ready to make decisions? Every company is different, and cookie-cutter advice doesn't work.
-              </p>
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Understand Your Project</h3>
+                <p class="text-navy-200">
+                  We start by learning about your expansion goals, timeline, and current stage. Are you exploring? Actively searching? Ready to make decisions? Every company is different, and cookie-cutter advice doesn't work.
+                </p>
+              </div>
             </div>
           </div>
 
-          <!-- Step 2 -->
-          <div class="relative">
-            <div class="bg-navy-800 rounded-xl p-8">
-              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
-                2
+          <!-- Step 2 - With Image -->
+          <div class="bg-navy-800 rounded-xl p-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div class="order-2 md:order-1">
+                <img
+                  src="/images/Economic_expansion_planning_overview__1_.png"
+                  alt="Expansion planning document overview"
+                  class="rounded-lg shadow-lg w-full max-w-sm mx-auto"
+                  loading="lazy"
+                />
               </div>
-              <h3 class="text-xl font-semibold text-white mb-3">Create Your Planning Framework</h3>
-              <p class="text-navy-200">
-                We provide a complimentary planning document that outlines what you need to consider: costs, risks, timelines, workforce requirements, regulatory considerations, and incentive opportunities. No sales pitch—just practical guidance.
-              </p>
+              <div class="order-1 md:order-2">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 mr-4">
+                    2
+                  </div>
+                  <h3 class="text-xl font-semibold text-white">Create Your Planning Framework</h3>
+                </div>
+                <p class="text-navy-200">
+                  We provide a complimentary planning document that outlines what you need to consider: costs, risks, timelines, workforce requirements, regulatory considerations, and incentive opportunities. No sales pitch—just practical guidance.
+                </p>
+              </div>
             </div>
           </div>
 
-          <!-- Step 3 -->
-          <div class="relative">
-            <div class="bg-navy-800 rounded-xl p-8">
-              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl mb-6">
-                3
+          <!-- Step 3 - With Image -->
+          <div class="bg-navy-800 rounded-xl p-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 mr-4">
+                    3
+                  </div>
+                  <h3 class="text-xl font-semibold text-white">Connect With the Right Resources</h3>
+                </div>
+                <p class="text-navy-200">
+                  When you're ready, we introduce you to economic development organizations, site selectors, or service providers that match your specific project. We focus on fit, not volume—the wrong introduction wastes everyone's time.
+                </p>
               </div>
-              <h3 class="text-xl font-semibold text-white mb-3">Connect With the Right Resources</h3>
-              <p class="text-navy-200">
-                When you're ready, we introduce you to economic development organizations, site selectors, or service providers that match your specific project. We focus on fit, not volume—the wrong introduction wastes everyone's time.
-              </p>
+              <div>
+                <img
+                  src="/images/Business_professionals_sealing_a_deal.png"
+                  alt="Business professionals shaking hands"
+                  class="rounded-lg shadow-lg w-full max-w-sm mx-auto"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -325,8 +337,16 @@ import MultiStepForm from '../components/MultiStepForm.astro';
     </section>
 
     <!-- Trust/Credibility Section -->
-    <section class="py-12 bg-white border-t border-gray-100">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="relative py-12 border-t border-gray-100 overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          src="/images/Subtle_geometric_gradient_background.png"
+          alt=""
+          class="w-full h-full object-cover opacity-50"
+          loading="lazy"
+        />
+      </div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
           <p class="text-gray-500 text-sm uppercase tracking-wide mb-4">Trusted by companies expanding across the United States</p>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
