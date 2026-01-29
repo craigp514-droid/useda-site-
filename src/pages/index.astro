@@ -132,17 +132,27 @@ import MultiStepForm from '../components/MultiStepForm.astro';
         </div>
 
         <div class="space-y-8">
-          <!-- Step 1 -->
+          <!-- Step 1 - With Image -->
           <div class="bg-navy-800 rounded-xl p-8">
-            <div class="flex items-start">
-              <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 mr-6">
-                1
-              </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 class="text-xl font-semibold text-white mb-3">Understand Your Project</h3>
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0 mr-4">
+                    1
+                  </div>
+                  <h3 class="text-xl font-semibold text-white">Understand Your Project</h3>
+                </div>
                 <p class="text-navy-200">
                   We start by learning about your expansion goals, timeline, and current stage. Are you exploring? Actively searching? Ready to make decisions? Every company is different, and cookie-cutter advice doesn't work.
                 </p>
+              </div>
+              <div>
+                <img
+                  src="/images/ChatGPT_Image_Jan_29__2026__01_20_53_PM.png"
+                  alt="Two professionals discussing expansion plans"
+                  class="rounded-lg shadow-lg w-full max-w-sm mx-auto"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -196,6 +206,17 @@ import MultiStepForm from '../components/MultiStepForm.astro';
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Process Infographic -->
+        <div class="mt-16 text-center">
+          <p class="text-navy-200 text-lg mb-6">The Expansion Journey at a Glance</p>
+          <img
+            src="/images/ChatGPT_Image_Jan_29__2026__01_21_01_PM.png"
+            alt="Expansion process infographic: Site Selection, Permitting, Incentives, Workforce Training, Expansion"
+            class="mx-auto rounded-xl shadow-lg max-w-4xl w-full"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
